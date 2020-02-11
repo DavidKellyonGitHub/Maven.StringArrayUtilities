@@ -59,7 +59,13 @@ public class StringArrayUtils {
      * @return an array with identical contents in reverse order
      */ // TODO
     public static String[] reverse(String[] array) {
-        return null;
+        String[] reversed = new String[array.length];
+       
+        for (int i = 0; i<array.length;i++){
+            reversed[array.length-i-1] = array[i];
+
+        }
+        return reversed;
     }
 
     /**

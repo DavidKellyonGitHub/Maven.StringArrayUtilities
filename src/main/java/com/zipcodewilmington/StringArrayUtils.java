@@ -1,5 +1,7 @@
 package com.zipcodewilmington;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 1/29/18.
  */
@@ -60,7 +62,7 @@ public class StringArrayUtils {
      */ // TODO
     public static String[] reverse(String[] array) {
         String[] reversed = new String[array.length];
-       
+
         for (int i = 0; i<array.length;i++){
             reversed[array.length-i-1] = array[i];
 
@@ -73,7 +75,14 @@ public class StringArrayUtils {
      * @return true if the order of the array is the same backwards and forwards
      */ // TODO
     public static boolean isPalindromic(String[] array) {
-        return false;
+        String[] reversed = new String[array.length];
+
+        for (int i = 0; i<array.length;i++){
+            reversed[array.length-i-1] = array[i];
+
+        }
+        return Arrays.equals(reversed, array);
+
     }
 
     /**

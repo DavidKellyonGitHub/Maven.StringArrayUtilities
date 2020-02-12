@@ -90,7 +90,14 @@ public class StringArrayUtils {
      * @return true if each letter in the alphabet has been used in the array
      */ // TODO
     public static boolean isPangramic(String[] array) {
-        return false;
+        String words = Arrays.toString(array).toLowerCase();
+        int falsy = 0;
+        for (char j = 'a'; j <= 'z'; j++) {
+            if (words.indexOf(j) == -1) {
+                falsy++;
+            }
+        }
+        return falsy == 0 ;
     }
 
     /**
